@@ -188,8 +188,8 @@ const Details: React.FC = () => {
                       )?.flavor_text
                     ).replace('', '\n')}
                   </li>
-                  <li>Height: {pokemon?.height} metters</li>
-                  <li>Weight: {pokemon?.weight} kilograms</li>
+                  <li>Height: {Number(pokemon?.height) / 10} metters</li>
+                  <li>Weight: {Number(pokemon?.weight) / 10} kilograms</li>
                   <li>
                     Genus:{' '}
                     {
