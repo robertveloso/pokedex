@@ -16,7 +16,6 @@ export const Container = styled.div`
 
       h1 {
         color: ${props => props.theme.colors.primary};
-        /* color: #17171b !important; */
       }
     }
   }

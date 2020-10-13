@@ -1,10 +1,10 @@
 import { takeLatest, put, all } from 'redux-saga/effects'
 
-import { saveSuccess, saveFailure } from './actions'
+import { saveRequest, saveSuccess, saveFailure } from './actions'
 
 import types from '../constants/types'
 
-export function* saveFavorite({ payload }) {
+export function* saveFavorite({ payload }: ReturnType<typeof saveRequest>) {
   try {
     const data = {
       name: payload.name,

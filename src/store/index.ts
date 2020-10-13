@@ -40,7 +40,7 @@ const makeStore: MakeStore = (context: Context) => {
     }
 
     const persistedReducer = persistReducer(persistConfig, rootReducer)
-    const store = makeConfiguredStore(persistedReducer, middlewares)
+    const store: any = makeConfiguredStore(persistedReducer, middlewares)
 
     ;(store as SagaStore).sagaTask = sagaMiddleware.run(rootSaga)
 

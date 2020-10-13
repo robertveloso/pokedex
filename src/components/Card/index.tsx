@@ -10,7 +10,11 @@ import * as Actions from '../../store/modules/pokemon/actions'
 
 import { Container, Image, PokeballBg, PatternBg } from './styles'
 
-const Card: React.FC = ({ data }) => {
+interface IProps {
+  data?: any
+}
+
+const Card: React.FC<IProps> = ({ data }) => {
   const dispatch = useDispatch()
   const router = useRouter()
 

@@ -5,6 +5,7 @@ import api from '../../../services/api'
 import {
   initSuccess,
   initFailure,
+  filterRequest,
   filterSuccess,
   filterFailure
 } from './actions'
@@ -25,7 +26,7 @@ export function* initPokedex() {
     yield put(initFailure())
   }
 }
-export function* filterPokedex({ payload }) {
+export function* filterPokedex({ payload }: ReturnType<typeof filterRequest>) {
   try {
     const { data, input } = payload
     const allowed = pokemonFilter(all_pokemons, input)

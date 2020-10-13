@@ -17,7 +17,6 @@ import { Header } from '../components'
 
 import { wrapper } from '../store'
 import { initRequest } from '../store/modules/pokedex/actions'
-import { saveRequest } from '../store/modules/pokemon/actions'
 
 const Pokedex: React.FC<AppProps> = ({ Component, pageProps }) => {
   const store = useStore()

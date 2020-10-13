@@ -72,19 +72,6 @@ export const Container = styled.div`
         }
       }
     }
-
-    img {
-      position: absolute;
-      z-index: 999;
-      width: 334px;
-      height: 115px;
-      margin-top: -25px;
-      margin-left: -10px;
-      background: url(${props => props.src}) no-repeat;
-      background-size: 130px 130px;
-      background-position-y: 0px;
-      background-position-x: right;
-    }
   }
 `
 
@@ -112,7 +99,12 @@ export const PatternBg = styled.div`
   background-position-x: right;
   background-position-y: 10px;
 `
-export const Image = styled.div`
+
+interface IImageStyled {
+  src: string
+}
+
+export const Image = styled('div')<IImageStyled>`
   width: 335px;
   height: 130px;
   margin-top: -25px;
